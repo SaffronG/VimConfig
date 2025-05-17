@@ -1,5 +1,4 @@
 # NeoVim Config
----
 Details
 - Package Manger: Packer
 - File Explorer: NERDTree
