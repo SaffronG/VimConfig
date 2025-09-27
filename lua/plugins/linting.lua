@@ -23,11 +23,9 @@ return {
 			lua = { "luac" },
 			go = { "golangcilint" },
 			rust = { "snyk" },
-			c = { "clangtidy" },
+			c = { "trivy" },
 			cpp = { "cpplint" },
-			csharp = {
-				"dotenv_linter",
-			},
+			csharp = { "dotenv_linter" },
 		}
 
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
@@ -39,7 +37,7 @@ return {
 			end,
 		})
 
-		vim.keymap.set("n", "<leader>l", function()
+		vim.keymap.set("n", "<leader>l", function() -- <leader>l => Trigger linting for current file
 			lint.try_lint()
 		end, { desc = "Trigger linting for current file" })
 	end,

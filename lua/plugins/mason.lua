@@ -28,7 +28,7 @@ return {
 				"black", -- python formatter
 				"pylint", -- python linter
 				"eslint_d", -- js linter
-				"synk", -- rust linter
+				"snyk", -- rust linter
 				"dotenv_linter", -- c# linter
 				"luac", -- lua linter
 				"markdownlint", -- md linter
@@ -38,6 +38,7 @@ return {
 				"golangcilint", -- go linter
 				"clangtidy", -- c linter
 				"cpplint", -- c++ linter
+				"sonarlint-language-server",
 			},
 		})
 	end,
