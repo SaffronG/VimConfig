@@ -1,4 +1,5 @@
 return {
+	-- SYNTAX FORMATTING --
 	"williamboman/mason.nvim",
 	dependencies = {
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
@@ -22,23 +23,15 @@ return {
 		})
 		mason_tool_installer.setup({
 			ensure_installed = {
-				"prettier", -- prettier formatter
-				"stylua", -- lua formatter
-				"isort", -- python formatter
-				"black", -- python formatter
-				"pylint", -- python linter
-				"eslint_d", -- js linter
-				"snyk", -- rust linter
-				"dotenv_linter", -- c# linter
-				"luac", -- lua linter
-				"markdownlint", -- md linter
-				"ast-grep", -- html, css, js linter
-				"jsonlint", -- json linter
-				"yamllint", -- yaml linter
-				"golangcilint", -- go linter
-				"clangtidy", -- c linter
-				"cpplint", -- c++ linter
-				"sonarlint-language-server",
+				"prettier",
+				"cpplint",
+				"stylua",
+				"rustfmt",
+				"markdownlint",
+				"gofumpt",
+				"csharpier",
+				"snyk",
+				"black",
 			},
 		})
 	end,

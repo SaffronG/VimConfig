@@ -25,5 +25,3 @@ vim.opt.showcmd = true
 vim.opt.backup = false
 vim.opt.writebackup = false
 vim.opt.hlsearch = true
-
-

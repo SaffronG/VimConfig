@@ -8,24 +8,23 @@ return {
 		local lint = require("lint")
 
 		lint.linters_by_ft = {
-			javascript = { "eslint_d" },
-			typescript = { "eslint_d" },
+			javascript = { "eslint_d", "ast-grep" },
+			typescript = { "eslint_d", "ast-grep" },
 			javascriptreact = { "eslint_d" },
 			typescriptreact = { "eslint_d" },
 			svelte = { "eslint_d" },
-			python = { "pylint" },
+			python = { "mypy", "pylint" },
 			css = { "ast-grep" },
 			html = { "ast-grep" },
 			json = { "jsonlint" },
-			yaml = { "yamllint" },
 			markdown = { "markdownlint" },
 			graphql = { "eslint_d" },
-			lua = { "luac" },
-			go = { "golangcilint" },
+			lua = { "luacheck" },
+			go = { "snyk" },
 			rust = { "snyk" },
-			c = { "trivy" },
-			cpp = { "cpplint" },
-			csharp = { "dotenv_linter" },
+			c = { "cpplint", "trivy" },
+			cpp = { "cpplint", "trivy" },
+			csharp = { "trivy", "semgrep" },
 		}
 
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
