@@ -8,14 +8,14 @@ return {
 		local lint = require("lint")
 
 		lint.linters_by_ft = {
-			javascript = { "eslint_d", "ast-grep" },
-			typescript = { "eslint_d", "ast-grep" },
+			javascript = { "eslint_d" },
+			typescript = { "eslint_d" },
 			javascriptreact = { "eslint_d" },
 			typescriptreact = { "eslint_d" },
 			svelte = { "eslint_d" },
 			python = { "mypy", "pylint" },
-			css = { "ast-grep" },
-			html = { "ast-grep" },
+			css = { "stylelint" },
+			html = { "htmlhint" },
 			json = { "jsonlint" },
 			markdown = { "markdownlint" },
 			graphql = { "eslint_d" },

@@ -21,8 +21,8 @@ return {
 				python = { "black", "isort" },
 				go = { "gofumt" },
 				rust = { "rustfmt", lsp_format = "fallback" },
-				c = { "clangformat" },
-				cpp = { "clangformat" },
+				c = { "clang-format" },
+				cpp = { "clang-format" },
 				csharp = { "csharpier" },
 			},
 			format_on_save = {

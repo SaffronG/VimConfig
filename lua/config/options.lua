@@ -3,8 +3,8 @@ vim.opt.fileformat = "unix"
 vim.opt.encoding = "utf-8"
 
 -- Indentation
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
+vim.opt.tabstop = 3
+vim.opt.softtabstop = 3
 vim.opt.shiftwidth = 4
 vim.opt.autoindent = true
 vim.opt.smarttab = true
