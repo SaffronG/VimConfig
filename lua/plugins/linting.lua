@@ -25,6 +25,7 @@ return {
 			c = { "cpplint", "trivy" },
 			cpp = { "cpplint", "trivy" },
 			csharp = { "trivy", "semgrep" },
+			haskell = {},
 		}
 
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })

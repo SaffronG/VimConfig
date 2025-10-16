@@ -24,6 +24,7 @@ return {
 				c = { "clang-format" },
 				cpp = { "clang-format" },
 				csharp = { "csharpier" },
+				haskell = { "fourmolu" },
 			},
 			format_on_save = {
 				lsp_fallback = true, -- use lsp if no formatter available
@@ -32,12 +33,12 @@ return {
 			},
 		})
 
-		vim.api.nvim_create_autocmd("BufWritePre", {
-			pattern = "*",
-			callback = function(args)
-				require("conform").format({ bufnr = args.buf })
-			end,
-		})
+		--vim.api.nvim_create_autocmd("BufWritePre", {
+		--pattern = "*",
+		--callback = function(args)
+		--require("conform").format({ bufnr = args.buf })
+		--end,
+		--})
 		vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
 
 		-- FORMATTER KEYMAPS --

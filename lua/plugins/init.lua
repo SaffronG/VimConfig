@@ -11,5 +11,4 @@ return {
 	require("plugins.dial"),
 	require("plugins.harpoon"),
 	require("plugins.neotree"),
-	require("plugins.lsp"),
 }
