@@ -21,7 +21,7 @@ return {
 			graphql = { "eslint_d" },
 			lua = { "luacheck" },
 			go = { "snyk" },
-			rust = { "bacon" },
+			rust = { "clippy" },
 			c = { "cpplint", "trivy" },
 			cpp = { "cpplint", "trivy" },
 			csharp = { "trivy", "semgrep" },
