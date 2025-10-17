@@ -30,7 +30,6 @@ return {
 				"markdownlint",
 				"gofumpt",
 				"csharpier",
-				"snyk",
 				"black",
 			},
 		})
