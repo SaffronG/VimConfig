@@ -18,15 +18,6 @@ return {
 				},
 			},
 		})
-
-		-- Keymap: Toggle Neo-tree
-		vim.keymap.set(
-			"n",
-			"<leader>n",
-			":Neotree toggle<CR>",
-			{ noremap = true, silent = true, desc = "Toggle Neo-tree" }
-		)
-
 		-- Keymap: Toggle hidden files
 		local function ToggleHiddenFiles()
 			local manager = require("neo-tree.sources.manager")
