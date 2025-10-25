@@ -1,38 +1,48 @@
 -- REMAPS
-local keymap = vim.keymap.set
+local keymap = vim.keymap -- ✅ use the keymap *table*, not the function
 local opts = { noremap = true, silent = true }
+
 local harpoon = require("harpoon")
 
 -- NEOTREE
-keymap("n", "fs", ":Neotree<CR>", opts) -- OPEN NEOTree
+keymap.set("n", "fs", ":Neotree<CR>", opts) -- Open Neo-tree
 keymap.set("n", "<leader>n", ":Neotree toggle<CR>", { noremap = true, silent = true, desc = "Toggle Neo-tree" })
 
-harpoon:setup() -- Harpoon Setup
+-- Harpoon setup
+harpoon:setup()
 
-keymap("n", "<leader>a", function()
+keymap.set("n", "<leader>a", function()
 	harpoon:list():add()
-end)
-keymap("n", "<C-e>", function()
+end, opts)
+
+keymap.set("n", "<C-e>", function()
 	harpoon.ui:toggle_quick_menu(harpoon:list())
-end)
-keymap("n", "<leader>q", function()
+end, opts)
+
+keymap.set("n", "<leader>q", function()
 	harpoon:list():remove()
-end)
-keymap("n", "<C-1>", function()
+end, opts)
+
+keymap.set("n", "<C-1>", function()
 	harpoon:list():select(1)
-end)
-keymap("n", "<C-2>", function()
+end, opts)
+
+keymap.set("n", "<C-2>", function()
 	harpoon:list():select(2)
-end)
-keymap("n", "<C-3>", function()
+end, opts)
+
+keymap.set("n", "<C-3>", function()
 	harpoon:list():select(3)
-end)
-keymap("n", "<C-4>", function()
+end, opts)
+
+keymap.set("n", "<C-4>", function()
 	harpoon:list():select(4)
-end)
-keymap("n", "<C-Left>", function()
+end, opts)
+
+keymap.set("n", "<C-Left>", function()
 	harpoon:list():prev()
-end)
-keymap("n", "<C-Right>", function()
+end, opts)
+
+keymap.set("n", "<C-Right>", function()
 	harpoon:list():next()
-end)
+end, opts)
