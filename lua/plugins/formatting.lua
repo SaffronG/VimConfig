@@ -19,7 +19,7 @@ return {
 				graphql = { "prettier" },
 				lua = { "stylua" },
 				python = { "black", "isort" },
-				go = { "gofumt" },
+				go = { "gofumt", "crlfmt" },
 				rust = { "rustfmt", lsp_format = "fallback" },
 				c = { "clang-format" },
 				cpp = { "clang-format" },
