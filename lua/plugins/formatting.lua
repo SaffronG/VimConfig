@@ -25,6 +25,7 @@ return {
 				cpp = { "clang-format" },
 				csharp = { "csharpier" },
 				haskell = { "fourmolu" },
+				assembly = { "asmfmt" },
 			},
 			format_on_save = {
 				lsp_fallback = true, -- use lsp if no formatter available

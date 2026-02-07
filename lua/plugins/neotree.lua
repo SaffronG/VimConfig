@@ -35,7 +35,7 @@ return {
 
 		vim.keymap.set(
 			"n",
-			"<leader>h",
+			"<leader>.",
 			ToggleHiddenFiles,
 			{ noremap = true, silent = true, desc = "Toggle hidden files" }
 		)

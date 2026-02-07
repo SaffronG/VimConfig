@@ -1,6 +1,6 @@
 -- Remaps
-local options = vim.opt
-local api_conf = vim.api
+local options = vim.opt -- luacheck:ignore
+local api_conf = vim.api -- luacheck:ignore
 
 -- Basic Settings
 options.fileformat = "unix"
@@ -26,6 +26,7 @@ options.scrolloff = 8
 options.showcmd = true
 
 -- Backup and Search
-options.backup = false
+options.backup = true
+options.undofile = true
 options.writebackup = false
 options.hlsearch = true

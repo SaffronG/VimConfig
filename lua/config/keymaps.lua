@@ -1,6 +1,26 @@
 -- REMAPS
-local keymap = vim.keymap -- ✅ use the keymap *table*, not the function
+local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
+
+keymap.set({ "n", "v" }, "<C-c>", '"+y', opts)
+
+-- Paste from system clipboard
+keymap.set("n", "<C-v>", '"+p', opts)
+keymap.set("v", "<C-v>", '"+p', opts)
+keymap.set("i", "<C-v>", "<C-r>+", opts)
+
+vim.g.clipboard = {
+	name = "wl-clipboard",
+	copy = {
+		["+"] = "wl-copy",
+		["*"] = "wl-copy",
+	},
+	paste = {
+		["+"] = "wl-paste",
+		["*"] = "wl-paste",
+	},
+	cache_enabled = 0,
+}
 
 local harpoon = require("harpoon")
 
@@ -13,6 +33,10 @@ harpoon:setup()
 
 keymap.set("n", "<leader>a", function()
 	harpoon:list():add()
+end, opts)
+
+keymap.set("n", "<leader>h", function()
+	harpoon:toggle()
 end, opts)
 
 keymap.set("n", "<C-e>", function()

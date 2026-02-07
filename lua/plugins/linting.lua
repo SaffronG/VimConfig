@@ -24,8 +24,9 @@ return {
 			c = { "cpplint", "trivy" },
 			go = { "staticcheck" },
 			cpp = { "cpplint", "trivy" },
-			csharp = { "trivy", "semgrep" },
-			haskell = {},
+			csharp = { "trivy" },
+			haskell = { "hlint" },
+			elixir = { "trivy" },
 		}
 
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
